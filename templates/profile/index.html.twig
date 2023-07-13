@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfileController!{% endblock %}
+
+{% block body %}
+
+    <div>Your email: {{ user.email }}</div>
+
+    {% for roles in user.roles %}
+        <div>Your role(s): {{ roles }}</div>
+    {% endfor %}
+
+    <div><a href="{{ path('app_edit_user') }}">Edit user</a></div>
+
+{% endblock %}

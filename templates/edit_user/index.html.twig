@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EditUserController!{% endblock %}
+
+{% block body %}
+    <h1>Edit user</h1>
+    {{ form_errors(editUserForm) }}
+
+    {{ form_start(editUserForm) }}
+    {{ form_row(editUserForm.email) }}
+    {{ form_row(editUserForm.plainPassword, {
+        label: 'Password'
+    }) }}
+
+    <button type="submit" class="btn">Update</button>
+    {{ form_end(editUserForm) }}
+{% endblock %}

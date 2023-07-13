@@ -21,12 +21,12 @@ class HomeController extends AbstractController
     {
         $user = $this->security->getUser();
         if($user != null) {
-            $username = $user->getUsername();
+            $email = $user->getEmail();
         } else {
             return $this->redirectToRoute('app_login');
         }
         return $this->render('home/index.html.twig', [
-            'username' => $username,
+            'email' => $email,
         ]);
     }
 }
