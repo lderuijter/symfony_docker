@@ -20,13 +20,8 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         $user = $this->security->getUser();
-        if($user != null) {
-            $email = $user->getEmail();
-        } else {
-            return $this->redirectToRoute('app_login');
-        }
         return $this->render('home/index.html.twig', [
-            'email' => $email,
+            'user' => $user,
         ]);
     }
 }

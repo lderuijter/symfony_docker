@@ -3,5 +3,5 @@
 {% block title %}Hello user!{% endblock %}
 
 {% block body %}
-    <div>logged in as: {{ email }}</div>
+    <div>logged in as: {% if user is not null %} {{ user.email }} {% endif %}</div>
 {% endblock %}

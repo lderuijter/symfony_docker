@@ -4,10 +4,11 @@
 
 {% block body %}
 
-    <div>Your email: {{ user.email }}</div>
+    <div>Your email: {{ app.user.email }}</div>
 
-    {% for roles in user.roles %}
-        <div>Your role(s): {{ roles }}</div>
+    <div>Your role(s):</div>
+    {% for roles in app.user.roles %}
+        <div>{{ roles }}</div>
     {% endfor %}
 
     <div><a href="{{ path('app_edit_user') }}">Edit user</a></div>
