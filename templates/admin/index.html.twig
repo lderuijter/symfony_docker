@@ -8,6 +8,7 @@
     <ul>
         <li>
             {{ user.email }}
+            <a href="/admin/deleteUser/{{ user.id }}">Delete user</a>
         </li>
     </ul>
     {% endfor %}
