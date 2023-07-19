@@ -10,7 +10,8 @@
     {% for roles in app.user.roles %}
         <div>{{ roles }}</div>
     {% endfor %}
-
-    <div><a href="{{ path('app_edit_user') }}">Edit user</a></div>
+    <button type="button" class="btn btn-light" style="border: solid 2px black">
+        <a style="text-decoration: none; color: black" href="{{ path('app_edit_user') }}">Edit user</a>
+    </button>
 
 {% endblock %}

@@ -16,19 +16,18 @@
 
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+    <input style="width: 25vh" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
     <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+    <input style="width: 25vh" type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
 
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
     >
-
+    <br>
     <button class="btn btn-lg btn-primary" type="submit">
         Sign in
     </button>
-
-    <div>Don't have an account yet? Register <a href="{{ path('app_register') }}">here!</a></div>
+    <div style="margin-top: 15px">Don't have an account yet? Register <a href="{{ path('app_register') }}">here!</a></div>
 
 </form>
 {% endblock %}
