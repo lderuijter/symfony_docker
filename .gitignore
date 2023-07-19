@@ -1,8 +1,6 @@
 ### gitignore for symfony_docker ###
 ###> symfony/framework-bundle ###
-/.env.local
-/.env.local.php
-/.env.*.local
+/.env
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
@@ -66,3 +64,13 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
+
+###< phpstorm ###
+/.idea
