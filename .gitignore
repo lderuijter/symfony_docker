@@ -1,3 +1,7 @@
+### IDEA ###
+.idea
+### IDEA ###
+
 ### gitignore for symfony_docker ###
 ###> symfony/framework-bundle ###
 /.env
